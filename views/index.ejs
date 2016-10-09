@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+      <div class="header">
+        <span>布谷，早安！</span>
+      </div>
+      <div class="center">
+        <div class="center1">
+            <%if(!user){%>
+            <ul>
+                <li><a href="/login">登陆</a></li>
+                <li><a href="/reg">注册</a></li>
+            </ul>
+            <%}else{%>
+            <ul style="width:150px;font-size:20px;">
+                <li style="color:cornflowerblue;">欢迎您！<br/><%=user.name%></li>
+                <li><a href="/logout">退出</a></li>
+            </ul>
+            <%}%>
+
+        </div>
+        <div class="center2">
+           <%-message%>
+           <%if(!user){%>
+           <div style="font:bold 40px 'Adobe 楷体 Std R';margin-left:200px;margin-top:20px;margin-left:20px;color:cornflowerblue">欢迎发帖</div>
+            <div style="font:bold 20px 'Adobe 楷体 Std R';margin-left:200px;margin-top:20px;margin-left:20px;color:cornflowerblue">友情小贴士：
+                注册之后登陆才可以自己发帖哦！
+            </div>
+
+            <%-include posts%>
+            <%}else{%>
+            <%-include posts%>
+            <%-include say%>
+            <%}%>
+
+
+        </div>
+        <div class="cl"></div>
+      </div>
+      <div class="footer">
+
+      </div>
+  </body>
+</html>

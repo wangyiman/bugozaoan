@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+        .center1 form{
+            font:900 20px 'Adobe 楷体 Std R';
+            color:cornflowerblue;
+            margin-top:50px;
+            margin-left:10px;
+            width:170px;
+            height:50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <span>布谷，早安！</span>
+</div>
+<div class="center">
+    <div class="center1">
+        <form method="post">
+            <table>
+                <tr>
+                    用户姓名：
+                </tr>
+                <tr>
+                    <input type="text"name="username">
+                </tr>
+                <tr>
+                    用户密码：
+                </tr>
+                <tr>
+                    <input type="password"name="password">
+                </tr>
+                <tr>
+                    确认密码：
+                </tr>
+                <tr>
+                    <input type="password"name="password2">
+                </tr>
+                <tr>
+                    <input type="submit"value="注册">&nbsp;&nbsp;
+                    <input type="reset"value="重置">
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <div class="center2">
+        <%-message%>
+
+        <div style="font:bold 40px 'Adobe 楷体 Std R';margin-left:200px;margin-top:20px;margin-left:20px;color:cornflowerblue">欢迎发帖</div>
+        <div style="font:bold 20px 'Adobe 楷体 Std R';margin-left:200px;margin-top:20px;margin-left:20px;color:cornflowerblue">友情小贴士：
+            注册之后登陆才可以自己发帖哦！
+        </div>
+
+
+
+
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>
